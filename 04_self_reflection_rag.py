@@ -36,6 +36,7 @@ import os
 from typing import List, Any, Dict, Tuple
 from dataclasses import dataclass
 import json
+import re
 
 import bs4
 from dotenv import load_dotenv, find_dotenv
@@ -118,16 +119,27 @@ class SelfReflectionRAG:
 
         JSON output sample:
 
-        Provide your evaluation in valid JSON format with these exact field names. The JSON should be valid and use these *exact* field names.
+        Provide your evaluation in valid JSON format with these exact field names. The JSON should be valid and use these *exact* field names. Do not write anything like Here is my evaluation of the response, just return and json output and nothing else:
         """
 
         # Get evaluation from LLM and Extract content from AIMessage
         evaluation_result = self.llm.invoke(evaluation_prompt)
         evaluation_content = evaluation_result.content if hasattr(evaluation_result, 'content') else str(evaluation_result)
+        evaluation_content = re.findall(r"\{[\s\S]*\}", evaluation_content)
+        last_match = evaluation_content[-1]
+        cleaned_json_string = re.sub(r'[\x00-\x1F\x7F-\x9F]', '', last_match)
         
         try:
             # Parse the LLM's response as JSON
-            metrics_dict = json.loads(evaluation_content)
+            metrics_dict = json.loads(cleaned_json_string)
+
+            ReflectionMetrics(
+                confidence_score=float(metrics_dict['confidence_score']),
+                completeness_score=float(metrics_dict['completeness_score']),
+                factual_consistency_score=float(metrics_dict['factual_consistency_score']),
+                missing_info_details=metrics_dict['missing_info_details'],
+                improvement_areas=metrics_dict['improvement_areas']
+            )
             
             return ReflectionMetrics(
                 confidence_score=float(metrics_dict['confidence_score']),
@@ -136,6 +148,7 @@ class SelfReflectionRAG:
                 missing_info_details=metrics_dict['missing_info_details'],
                 improvement_areas=metrics_dict['improvement_areas']
             )
+
         except json.JSONDecodeError:
             # Fallback values if JSON parsing fails
             return ReflectionMetrics(
