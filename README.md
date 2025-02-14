@@ -1,6 +1,6 @@
 # Depth and Breadth of RAG Techniques
 
-![RAG Techniques Overview](images/rag_techniques_overview.png)
+![RAG Techniques Overview](images/rag_techniques_overview.png ![image](https://github.com/user-attachments/assets/5dcca155-2ab9-4e89-9928-d3927bff1f2f))
 
 > **Note:** Replace the above image link with the actual path or URL of the diagram/image you want to include.
 
