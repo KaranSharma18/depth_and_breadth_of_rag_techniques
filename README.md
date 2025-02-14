@@ -4,7 +4,7 @@
 
 ## Overview
 
-Welcome to **Depth and Breadth of RAG Techniques**, a collection of hands-on tutorials and code implementations showcasing multiple **Retrieval-Augmented Generation (RAG)** techniques. Each Python script in this repository focuses on a distinct approach to RAG, providing you with a comprehensive view of how to build and extend context-aware question-answering systems.
+Welcome to **Depth and Breadth of RAG Techniques**, a collection of hands-on tutorials and code implementations showcasing multiple **Retrieval-Augmented Generation (RAG)** techniques. Each Python script in this repository focuses on a distinct approach to RAG, providing you with a comprehensive view of how to build and extend context-aware question-answering systems. This repository was created with the intent to learn, practice, and demonstrate various RAG methods in a practical, code-focused manner.
 
 **Why RAG?**  
 RAG is a powerful paradigm that combines large language models (LLMs) with external knowledge sources, enhancing the model's factual accuracy and reducing hallucinations. By integrating retrieval steps into the generation pipeline, your application can dynamically pull in relevant context from large corpora of documents, ensuring more grounded responses.
