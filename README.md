@@ -1,7 +1,3 @@
-Below is a sample **README.md** you can adapt for your repository. Feel free to modify any sections, especially the image path or instructions, to match your specific setup.
-
----
-
 # Depth and Breadth of RAG Techniques
 
 ![RAG Techniques Overview](images/rag_techniques_overview.png)
@@ -164,25 +160,13 @@ pip install langchain langchain-groq bs4 faiss-cpu transformers python-dotenv nu
 
 ---
 
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it for personal or commercial projects.
-
----
-
 ## Author
 
-**[Your Name]**  
-- [LinkedIn](https://www.linkedin.com/in/your-linkedin-profile/)  
-- [GitHub](https://github.com/your-username)
+**[Karan Sharma]**  
+- [LinkedIn](https://www.linkedin.com/in/karansharma18/)  
+- [GitHub](https://github.com/KaranSharma18)
 
 If you find this repository helpful or have suggestions, please consider giving it a star ★ and opening an issue or pull request. Thanks for visiting!
 
 ---
-
-> **Showcasing on Your Resume?**  
-> Highlight your understanding of retrieval-augmented generation and LLM orchestration by pointing to this repository. Emphasize the variety of techniques covered (semantic chunking, multi-query, fusion, hybrid search, self-reflection) to demonstrate depth and breadth in modern AI workflows.
-
----
-
 Feel free to reach out for any questions, suggestions, or collaboration opportunities!
