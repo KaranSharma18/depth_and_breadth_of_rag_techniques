@@ -91,7 +91,7 @@ pip install langchain langchain-groq bs4 faiss-cpu transformers python-dotenv nu
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/your-username/depth_and_breadth_of_rag_techniques.git
+   git clone https://github.com/KaranSharma18/depth_and_breadth_of_rag_techniques.git
    cd depth_and_breadth_of_rag_techniques
    ```
 
