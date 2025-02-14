@@ -1,6 +1,6 @@
 # Depth and Breadth of RAG Techniques
 
-![image](https://github.com/user-attachments/assets/2d684b68-639a-4398-bf92-8155d6e24157) ![image](https://github.com/user-attachments/assets/e3f382ce-a025-4f44-8978-ec052fddf9dd))
+![image](https://github.com/user-attachments/assets/2d684b68-639a-4398-bf92-8155d6e24157)
 
 ## Overview
 
